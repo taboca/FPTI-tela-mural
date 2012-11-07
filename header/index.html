@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <link media="screen, projection" type="text/css" href="base.css" rel="stylesheet">
+    <link media="screen, projection" type="text/css" href="../lib/hdgrid.css" rel="stylesheet">
+    <link media="screen, projection" type="text/css" href="../lib/tagvisor.css" rel="stylesheet">
+<script src="../vendor/jquery-min.js"></script>
+<script src="../lib/choreographer.js"></script>
+<script src="map.js"></script>
+<script src="../lib/tagvisor.js"></script>
+<script>
+
+function animate() { 
+  tv.setup();
+  tv.add($('#animation li'));
+  tv.play();
+} 
+
+
+</script>
+  </head>
+<body onload='animate()' id='main'> 
+
+<table border='0' width="1900" height="100" cellpadding='0'  style='url(ttp://www.pti.org.br/sites/all/themes/pti/images/master/background-degradee-gray.gif); background-size:1920px 130px'>
+<tr>
+<td valign='top' width='1200'>
+<div style='background:url(http://www.pti.org.br/sites/all/themes/pti/images/master/logo-pti.png);width:70px;height:100px; background-size:200px 80px' ></div>
+</td>
+<td valign='top' >
+<div id='topright'></div>
+</td>
+<td valign='top' width='440' >
+<div id='topright2'></div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
