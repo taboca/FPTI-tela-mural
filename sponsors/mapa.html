@@ -7,6 +7,13 @@
 <script src="../lib/choreographer.js"></script>
 <script src="../lib/tagvisor.js"></script>
 <script src="../const.js"></script>
+<script src="../focus.js"></script>
+<script>
+function setImage(src) {
+	$("#target").attr("src",src);	
+} 
+</script>
+
 <head>
 <style>
   .inner { 
@@ -14,7 +21,6 @@
     border-radius:0px 20px 20px 0 ;
     margin:10px;
     width:100px; height:92px;
-    
   } 
 </style>
 </head>
@@ -23,15 +29,11 @@
 <table>
 <tr>
 <td valign='top'>
-<img src='mapa_anprotec-01.png' style='margin-top:-40px;width:810px'/>
+<img id='target' src='mapa_anprotec-01.png' style='margin-top:-40px;width:810px'/>
 </td>
 <td valign='top'>
-<div class='inner' > </div>
-<div class='inner' > </div>
-<div class='inner' > </div>
-<div class='inner' > </div>
-<div class='inner' > </div>
-<div class='inner' > </div>
+<div class='inner' onclick='setImage("mapa_anprotec-01.png")'> </div>
+<div class='inner' onclick='setImage("logo_inovacao.png")'> </div>
 </td>
 </tr>
 </table>
