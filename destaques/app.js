@@ -72,6 +72,7 @@ var app =  {
 
 		var k = document.createElement('div');
 		k.className = 'app_element';
+		
 		k.innerHTML = '<div class="title">'+t+'</div><div class="description">'+d+'</div>';
 		
 		var t = 4;
@@ -83,6 +84,8 @@ var app =  {
 
 		var old = this.element.firstChild;
 		this.element.insertBefore(k, this.element.firstChild);
+		var diff = window.innerHeight - k.offsetHeight;
+		k.style.marginTop=diff+"px";
 		this.element.removeChild(old);
 
 		var self = this;
