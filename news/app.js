@@ -82,7 +82,7 @@ var app =  {
 			this.element.appendChild(kk);
 			k.className="item";
 			this.total++;
-			if(this.total>3) { 
+			if(this.total>1) { 
 				$($("div.item")[0]).animate({height:'hide'}, 1000, function() {  $($("div.item")[0]).remove() } );
 				$($("div.itemshadow")[0]).animate({height:'hide'}, 1000, function() {  $($("div.itemshadow")[0]).remove() } );
 
@@ -105,13 +105,12 @@ var app =  {
      		$(result.xmlDocument).find('item').each(function(){
                         var title   = $(this).find('title').text();
                         var desc    = $(this).find('description').text();
-			/*
-                        var local   = $(this).find('local').text();
-                        var data    = $(this).find('data').text();
-                        var hora    = $(this).find('hora').text();
-			*/
-			desc='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel nibh est. Aliquam quis felis eu tortor imperdiet suscipit. Etiam ac nulla nunc. Fusce at dui dui, ac tempus ante. In tempus euismod lorem a pharetra. Nulla a sem suscipit enim sollicitudin mollis. Nam tincidunt pellentesque massa.';
-                        self.tweetQueue.push( '<div class=""><h3>'+title+'</h3><div class="desc">'+desc+'</div></div>' );
+
+			var link = $(this).find('description').text();
+			$('#temp').html(link);
+			var plainText = $('#temp').text();	
+	
+                        self.tweetQueue.push( '<div class=""><h3>'+title+'</h3><div class="desc">'+plainText+'</div></div>' );
                         cc++;
                 });
 

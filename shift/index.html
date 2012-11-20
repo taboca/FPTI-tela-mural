@@ -7,13 +7,15 @@
 <script src="../lib/choreographer.js"></script>
 <script src="../lib/tagvisor.js"></script>
 <script src="../const.js"></script>
+<!--
 <script src="../focus.js"></script>
+-->
 <script>
-function setImage(src) {
-	$("#target").attr("src",src);	
+function setFrame(src) {
+	register("/main/target", "mapa", src, iframeTemplate);
+	compile();
 } 
 </script>
-
 <head>
 <style>
   .inner { 
@@ -29,11 +31,13 @@ function setImage(src) {
 <table>
 <tr>
 <td valign='top'>
-<img id='target' src='mapa_anprotec-01.png' style='margin-top:-40px;width:810px'/>
+<div id='target' style='width:810px;height:400px'>
+
+</div>
 </td>
 <td valign='top'>
-<div class='inner' onclick='setImage("mapa_anprotec-01.png")'> </div>
-<div class='inner' onclick='setImage("logo_inovacao.png")'> </div>
+<div class='inner' onclick='setFrame("mapa.html")'> </div>
+<div class='inner' onclick='setFrame("logo_inovacao.png")'> </div>
 </td>
 </tr>
 </table>

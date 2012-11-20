@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
 register("/main/qqqqqqqqqqqqqqqq", "0.698045977995738", "./header/index.html", iframeTemplate);
-register("/main/wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww", "0.5151785668496989", "./video/index.html", iframeTemplate);
-register("/main/eeeeeeeeeeeeeeeeeeeeeeee", "0.7342910511830653", "./news/index.html", iframeTemplate);
-register("/main/rrrrrrrrrrrrrrrrrrrrrrrr", "0.8204470457591272", "./sponsors/mapa.html", iframeTemplate);
+register("/main/wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww", "0.5151785668496989", "./destaques/index.html", iframeTemplate);
+register("/main/eeeeeeeeeeeeeeeeeeeeeeee", "0.7342910511830653", "./news2/index.html", iframeTemplate);
+register("/main/rrrrrrrrrrrrrrrrrrrrrrrr", "0.8204470457591272", "./shift/index.html", iframeTemplate);
 register("/main/ttttttttttttttt", "0.8841019960292364", "./twitter/index.html", iframeTemplate);
 register("/main/yyyyyyyyy", "0.8448067060305994", "./weather/index.html", iframeTemplate);
-register("/main/uuuuuuuuuuuuuuuu", "0.13553831341819889", "./typing/index.html", iframeTemplate);
+register("/main/uuuuuuuuuuuuuuuu", "0.13553831341819889", "./news/index.html", iframeTemplate);
 
    compile();   
    setTimeout('startEngine()',5000);

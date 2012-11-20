@@ -4,8 +4,10 @@
 	padding-top:0;
     } 
 
-    div.itemshadow { 
+/*
 	background:url(../vendor/shadow.png) 50% 0 no-repeat; 
+*/
+    div.itemshadow { 
 	background-size: 530px 50px; 
 	margin-top:1.0em;
 	height:20px; 
@@ -17,7 +19,7 @@
 	margin-left:.8em;
     } 
     div h3 { 
-	font-size:130%;
+	font-size:160%;
 	font-weight:bold;
 	margin:0;
         color:rgb(70,130,150);
@@ -25,7 +27,7 @@
 	margin-bottom:.3em;
     } 
     div.desc { 
-	font-size:16px ! important;
+	font-size:24px ! important;
 	margin-bottom:5px;
  	font-weight:normal ! important;
 	color:black ! important;
