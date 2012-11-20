@@ -85,7 +85,7 @@ var app =  {
 		var old = this.element.firstChild;
 		this.element.insertBefore(k, this.element.firstChild);
 		var diff = window.innerHeight - k.offsetHeight;
-		k.style.marginTop=diff+"px";
+		//k.style.marginTop=diff+"px";
 		this.element.removeChild(old);
 
 		var self = this;
