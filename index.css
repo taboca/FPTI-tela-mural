@@ -1,14 +1,22 @@
 @import url("http://fonts.googleapis.com/css?family=Varela");
+@import url("http://fonts.googleapis.com/css?family=Asap");
+
 
 html, body { margin:0; padding:0; color:white; overflow:hidden } 
 
 * { 
-  font-family: 'Varela', sans-serif;
+  font-family: 'Asap', sans-serif;
 } 
 
 body { 
   width:1920px; height:1080px;
-  background: -moz-radial-gradient( 50% 50%, circle , white, rgb(150,180,200));
+  background-color:rgb(80,140,90);
+  background: linear-gradient(-45deg, white, rgba(255,255,255,0), darkblue);
+  background: -moz-radial-gradient( 50% 0%, circle , white, rgb(108,143,100));
+} 
+
+.viewport2 { 
+  width:1920px; height:1080px;
 } 
 
 .datetime  { 
@@ -20,8 +28,19 @@ body {
 } 
 
 .inner { 
-  margin:10px; 
-  background-color:rgba(255,255,255,.5);;
+  margin-right:20px; 
+  margin-top:20px;
+  background-color:rgba(255,255,255,1);
   border-radius:25px;
+  overflow:hidden;
+} 
+
+.inner2 { 
+  margin-right:0;
+  margin-top:20px;
+  background-color:rgba(255,255,255,1);
+  border-radius:25px;
+  border-top-right-radius:0;
+  border-bottom-right-radius:0;
   overflow:hidden;
 } 

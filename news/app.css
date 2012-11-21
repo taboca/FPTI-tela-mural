@@ -10,7 +10,6 @@
     div.itemshadow { 
 	background-size: 530px 50px; 
 	margin-top:1.0em;
-	height:20px; 
 	width:100%;
     } 
     div.item { 
@@ -22,12 +21,14 @@
 	font-size:160%;
 	font-weight:bold;
 	margin:0;
-        color:rgb(70,130,150);
+                font-family:Sanchez;
+
+        color:black;
 	margin-top:0em;
 	margin-bottom:.3em;
     } 
     div.desc { 
-	font-size:24px ! important;
+	font-size:16pt ! important;
 	margin-bottom:5px;
  	font-weight:normal ! important;
 	color:black ! important;

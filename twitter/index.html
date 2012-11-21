@@ -11,20 +11,22 @@
  } 
 
  .twtr-tweet-text {
-    font-size: 124%;
+    font-size: 15pt;
     font-family: Georgia, Serif;
     font-weight:bold;
  }
   
+/*
+   background-color:rgba(0,0,0,.5);
+*/
  .twtr-tweet { 
    margin-bottom:5px;
-   background-color:rgba(255,255,255,.5);
    padding:.5em;
  } 
  
  .twtr-avatar { 
-    width:60px ! important;
-    height:60px ! important;
+    width:48px ! important;
+    height:48px ! important;
     margin-right:10px;
  } 
  .twtr-tweet img { 
@@ -56,7 +58,7 @@ new TWTR.Widget({
   interval: 8400,
   title: 'Anprotec',
   subject: 'Latinoware',
-  width:  580,
+  width:  960,
   height: 360,
   theme: {
     shell: {
@@ -64,7 +66,7 @@ new TWTR.Widget({
       color: '#000'
     },
     tweets: {
-      background: 'rgba(255,255,255,.3)',
+      background: 'transparent',
       color: '#888',
       links: '#000'
     }
