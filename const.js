@@ -13,8 +13,8 @@ URL_WEATHER = "http://weather.yahooapis.com/forecastrss?w=449704&u=c";
 URL_GRADE ="/channel-store/grade";
 
 ACONTECE_URL = "http://feeds.feedburner.com/clickgeral?format=xml";
-URL_DESTAQUES2 = "http://www.eesc.usp.br/portaleesc/index.php?option=com_content&view=category&id=121&format=feed&type=rss";
 
+URL_NOTICIAS = "http://www.eesc.usp.br/portaleesc/index.php?option=com_content&view=category&id=121&format=feed&type=rss";
 
 TEMPO_INICIO_MIDIA = 5000; 
 TEMPO_REFRESH_MIDIA = 80000; 

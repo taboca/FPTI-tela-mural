@@ -1,0 +1,38 @@
+    body { 
+ 	font-weight:bold;	
+	padding:10px;
+	padding-top:0;
+    } 
+
+    div.itemshadow { 
+	background:url(../vendor/shadow.png) 50% 0 no-repeat; 
+	background-size: 330px 60px; 
+	opacity:.5;
+	margin-top:.5em;
+	height:16px; 
+	width:100%;
+    } 
+    div.item { 
+	color:#444;
+	margin-top:.5em;
+	margin-left:.8em;
+	height:110px;
+    } 
+    div h3 { 
+	font-size:24px;
+	font-weight:bold;
+	color:#444;
+	margin:0;
+	margin-top:0em;
+	margin-bottom:.2em;
+    } 
+    div.desc { 
+	font-size:15pt ! important;
+	margin-bottom:5px;
+	color:#777 ! important;
+	border:0px solid red;
+	overflow:hidden;
+	text-overflow:ellipsis; 
+	height:80px;
+    } 
+

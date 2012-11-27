@@ -1,5 +1,6 @@
+
 var app =  {
-	feedURL : URL_DESTAQUES2,
+	feedURL : URL_NOTICIAS,
 	feed    : null, 
 
 	background : null, 
@@ -36,11 +37,12 @@ var app =  {
 	},
 
 	init : function () { 
+		// Notice this widget is now using the store, 
+		// so it's ignoring the this.feedURL 
 		this.feed = new t8l.feeds.Feed(this.feedURL);
 		this.feed.setResultFormat(t8l.feeds.Feed.XML_FORMAT);
 		this.feed.setNumEntries(10);
 	} ,
-        
 
 	popRequest : function() {
 		if (this.picQueue.length == 0) return false;
@@ -72,7 +74,6 @@ var app =  {
 
 		var k = document.createElement('div');
 		k.className = 'app_element';
-		
 		k.innerHTML = '<div class="title">'+t+'</div><div class="description">'+d+'</div>';
 		
 		var t = 4;
@@ -84,8 +85,6 @@ var app =  {
 
 		var old = this.element.firstChild;
 		this.element.insertBefore(k, this.element.firstChild);
-		var diff = window.innerHeight - k.offsetHeight;
-		//k.style.marginTop=diff+"px";
 		this.element.removeChild(old);
 
 		var self = this;
@@ -103,21 +102,8 @@ var app =  {
 	__feedUpdated : function(result) {
 		var self  = this;
 		if(result.error) { }; 
-     		$(result.xmlDocument).find('item').each(function(){ 
-			var title = $(this).find('title').text();
-			var docDate=new Date();
-			var docDateString = title.split("/");
-			var docDay = docDateString[0];
-			var docMonth = docDateString[1];
-			var docYear = docDateString[2];
-			docDate.setFullYear(parseInt(docYear),parseInt(docMonth-1),parseInt(docDay));
-			var today = new Date();
-			var link = $(this).find('description').text();
-			var src = "http"+link.split('http')[1].split('jpg')[0]+"jpg";
-			$('#temp').html(link);
-			var plainText = $('#temp').text();	
-			self.picQueue.push({'title':title, 'desc': plainText, 'src':src});
-		});
+		var obj = JSON.parse(result.data);
+		self.picQueue.push(obj);
 		setTimeout( function(){self.updateFeed()},1000);
 	}
 }
