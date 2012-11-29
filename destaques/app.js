@@ -49,7 +49,7 @@ var app =  {
 
 		var obj = this.picQueue.pop();
 		var t = obj.title; 
-		var d = obj.desc; 
+		var d = obj.descFull; 
 		var src = obj.src;
 
 		document.getElementById("container").removeChild(this.background);
