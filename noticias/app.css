@@ -6,10 +6,10 @@
 
     div.itemshadow { 
 	background:url(../vendor/shadow.png) 50% 0 no-repeat; 
-	background-size: 330px 60px; 
+	background-size: 90% 60px; 
 	opacity:.5;
 	margin-top:.5em;
-	height:16px; 
+	height:2px; 
 	width:100%;
     } 
     div.item { 
