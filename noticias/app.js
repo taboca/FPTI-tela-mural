@@ -81,6 +81,7 @@ var app =  {
 			this.element.appendChild(k);
 			this.element.appendChild(kk);
 			k.className="item";
+
 			this.total++;
 			if(this.total>3) { 
 				var localItem = $($('div.item')[0]);
@@ -90,12 +91,17 @@ var app =  {
 				var src = localItem.find('img').attr('src');
 				var obj = {'title':title,'desc':desc,'src':src, 'descFull':descFull};
 				t8l.message('/main/destaques', JSON.stringify(obj));
-				$($("div.item")[0]).animate({height:'hide'}, 1000, function() {  $($("div.item")[0]).remove() } );
-				$($("div.itemshadow")[0]).animate({height:'hide'}, 1000, function() {  $($("div.itemshadow")[0]).remove() } );
+				//$($("div.item")[0]).animate({height:'hide'}, 1000, function() {  $($("div.item")[0]).remove() } );
+				setTimeout(function() { $($("div.item")[0]).remove() } ,2000);
+				setTimeout(function() { $($("div.itemshadow")[0]).remove() } ,2000);
+
+			        $("div.item")[0].setAttribute("style","-moz-transition-property: margin-top;-moz-transition-duration:1s;margin-top:-120px ");
+
+
 
 				this.total--;
 			} 
-			setTimeout( function () { self.render() }, 6000);
+			setTimeout( function () { self.render() }, 10000);
 		} 
 	},
 
