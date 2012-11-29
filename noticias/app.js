@@ -94,7 +94,7 @@ var app =  {
 
 				this.total--;
 			} 
-			setTimeout( function () { self.render() }, 4000);
+			setTimeout( function () { self.render() }, 6000);
 		} 
 	},
 
@@ -117,9 +117,21 @@ var app =  {
 			*/
 
 			var link = $(this).find('description').text();
-			var src = "http"+link.split('http')[1].split('jpg')[0]+"jpg";
 			$('#temp').html(link);
-			var desc = $('#temp').text();	
+
+			var plainDesc = $('#temp').text();	
+
+			var desc = plainDesc.split('slide')[0];
+
+			var lines = desc.split('\n');
+			desc = lines[0].split('Body:')[1]; 
+			var descFull='';
+			for(var k in lines.length) { 
+				descFull+=lines[k];
+			}  
+
+			var slides = plainDesc.split('slide')[1];
+			var src = 'http'+slides.split('http')[1];
 	
                         self.tweetQueue.push( '<div class=""><h3>'+title+'</h3><div class="desc">'+desc+'</div><img src="'+src+'" style="display:none"/></div>' );
                         cc++;
