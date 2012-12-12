@@ -116,31 +116,9 @@ var app =  {
 		var self  = this; 
 		var cc=0;
      		$(result.xmlDocument).find('item').each(function(){
-                        var title   = $(this).find('title').text();
-			/*
-                        var local   = $(this).find('local').text();
-                        var data    = $(this).find('data').text();
-                        var hora    = $(this).find('hora').text();
-			*/
 
-			var link = $(this).find('description').text();
-			$('#temp').html(link);
-
-			var plainDesc = $('#temp').text();	
-
-			var desc = plainDesc.split('slide')[0];
-
-			var lines = desc.split('\n');
-			desc = lines[0].split('Body:')[1]; 
-			var descFull='';
-			for(var k=1; k<lines.length;k++) { 
-				descFull+=lines[k];
-			}  
-
-			var slides = plainDesc.split('slide')[1];
-			var src = 'http'+slides.split('http')[1];
-	
-                        self.tweetQueue.push( '<div class=""><h3>'+title+'</h3><div class="desc">'+desc+'</div><div class="descFull" style="display:none">'+descFull+'</div><img src="'+src+'" style="display:none"/></div>' );
+			var out = doFilter(this); 
+                        self.tweetQueue.push( '<div class=""><h3>'+out.title+'</h3><div class="desc">'+out.desc+'</div><div class="descFull" style="display:none">'+descFull+'</div><img src="'+out.src+'" style="display:none"/></div>' );
                         cc++;
                 });
 
