@@ -6,6 +6,6 @@ doFilter = function ()  {
  $('#temp').html(link);
  var plainText = $('#temp').text();
  var src = 'http://fotos.mixar.com.br'+image;
- return {'title':title, 'desc': plainText, 'src':src};
+ return {'title':title, 'description': plainText, 'src':src};
 
 } 
