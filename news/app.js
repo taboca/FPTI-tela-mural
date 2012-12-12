@@ -36,7 +36,7 @@
  * ***** END LICENSE BLOCK ***** */
 
 var app =  {
-	feedURL : ACONTECE_URL,
+	feedURL : URL_NOTICIAS2,
 	feed    : null, 
 	start : function() {
 
