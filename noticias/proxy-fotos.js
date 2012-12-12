@@ -1,8 +1,8 @@
-doFilter = function ()  { 
+doFilter = function (that)  { 
 
- var title = $(this).find('title').text();
- var image = $(this).find('img').attr('src');
- var link = $(this).find('description').text();
+ var title = $(that).find('title').text();
+ var image = $(that).find('img').attr('src');
+ var link = $(that).find('description').text();
  $('#temp').html(link);
  var plainText = $('#temp').text();
  var src = 'http://fotos.mixar.com.br'+image;
