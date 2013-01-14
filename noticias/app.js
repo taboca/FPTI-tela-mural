@@ -95,13 +95,13 @@ var app =  {
 				setTimeout(function() { $($("div.item")[0]).remove() } ,2000);
 				setTimeout(function() { $($("div.itemshadow")[0]).remove() } ,2000);
 
-			        $("div.item")[0].setAttribute("style","-moz-transition-property: margin-top;-moz-transition-duration:1s;margin-top:-120px ");
+			        $("div.item")[0].setAttribute("style","-moz-transition-property: margin-top;-moz-transition-duration:1s;margin-top:-72px ");
 
 
 
 				this.total--;
 			} 
-			setTimeout( function () { self.render() }, 10000);
+			setTimeout( function () { self.render() }, 5000);
 		} 
 	},
 

@@ -5,10 +5,10 @@
     } 
 
     div.itemshadow { 
-	background:url(../vendor/shadow.png) 50% 0 no-repeat; 
+	background:url(../vendor/shadow.png) 500px 0 no-repeat; 
 	background-size: 90% 60px; 
 	opacity:.5;
-	margin-top:.5em;
+	margin-top:10px;
 	height:2px; 
 	width:100%;
     } 
@@ -16,7 +16,7 @@
 	color:#444;
 	margin-top:20px;
 	margin-left:.8em;
-	height:110px;
+	height:60px;
     } 
     div h3 { 
 	font-size:24px;
@@ -34,5 +34,6 @@
 	overflow:hidden;
 	text-overflow:ellipsis; 
 	height:80px;
+    display:none;
     } 
 
