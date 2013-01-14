@@ -18,7 +18,7 @@ doFilter = function (that) {
  var slides = plainDesc.split('slide')[1];
  var src = 'http'+slides.split('http')[1];
 	
- return {'title':title, 'desc': descFull, 'src':src};
+ return {'title':title, 'subtitle':desc, 'body': descFull, 'src':src};
 
 }
 

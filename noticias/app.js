@@ -118,7 +118,7 @@ var app =  {
      		$(result.xmlDocument).find('item').each(function(){
 
 			var out = doFilter(this); 
-                        self.tweetQueue.push( '<div class=""><h3>'+out.title+'</h3><div class="desc">'+out.description+'</div><div class="descFull" style="display:none">'+out.description+'</div><img src="'+out.src+'" style="display:none"/></div>' );
+                        self.tweetQueue.push( '<div class=""><h3>'+out.title+'</h3><div class="desc">'+out.subtitle+'</div><div class="descFull" style="display:none">'+out.body+'</div><img src="'+out.src+'" style="display:none"/></div>' );
                         cc++;
                 });
 
