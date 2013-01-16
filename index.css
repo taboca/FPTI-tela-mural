@@ -8,11 +8,12 @@ html, body { margin:0; padding:0; color:white; overflow:hidden }
   font-family: 'Asap', sans-serif;
 } 
 
+/*
+*/
 body { 
   width:1920px; height:1080px;
-  background-color:rgb(80,140,90);
-  background: linear-gradient(-45deg, white, rgba(255,255,255,0), darkblue);
-  background: -moz-radial-gradient( 50% 0%, circle , white, rgb(108,143,100));
+  background: linear-gradient(180deg, rgba(100,150,250,1), rgba(50,100,200,1), rgba(50,50,150,1), rgba(50,100,200,1));
+  background: -moz-radial-gradient( 0% 0%, ellipse , white, rgba(50,100,200,1));
 } 
 
 .viewport2 { 
@@ -31,7 +32,21 @@ body {
 
 */
 .inner { 
-   background-color:rgba(255,255,255,1);
+  margin-right:20px; 
+  margin-top:20px;
+  border-radius:25px;
+  overflow:hidden;
+} 
+
+.inner3 { 
+  margin-right:20px; 
+  margin-top:20px;
+  border-radius:25px;
+  overflow:hidden;
+  background: linear-gradient(180deg, rgba(0,0,0,.5), rgba(0,0,0,0));
+} 
+
+.inner4 { 
   margin-right:20px; 
   margin-top:20px;
   border-radius:25px;
@@ -41,7 +56,7 @@ body {
 .inner2 { 
   margin-right:0;
   margin-top:20px;
-  background-color:rgba(255,255,255,1);
+  background-color:rgba(255,255,255,.7);
   border-radius:25px;
   border-top-right-radius:0;
   border-bottom-right-radius:0;

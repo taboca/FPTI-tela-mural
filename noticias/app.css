@@ -17,20 +17,20 @@
 	color:#444;
 	margin-top:20px;
 	margin-left:.8em;
+    margin-right:1em;
 	height:110px;
     } 
     div h3 { 
 	font-size:24px;
 	font-weight:bold;
-	color:#444;
+	color:#fff;
 	margin:0;
-	margin-top:0em;
-	margin-bottom:.2em;
+	margin-bottom:10px;
     } 
     div.desc { 
 	font-size:15pt ! important;
 	margin-bottom:5px;
-	color:#777 ! important;
+	color:#000 ! important;
 	overflow:hidden;
 	text-overflow:ellipsis; 
 	height:80px;
