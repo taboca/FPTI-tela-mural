@@ -1,0 +1,20 @@
+{
+"rules": [
+
+{
+ "about":"start",
+ "function":"saveRSS",
+ "expiretimer":10000, 
+ "data":{"value":"http://feeds.feedburner.com/clickgeral?format=xml","about":"noticias"}, "to":"next"
+}, 
+{
+ "about":"next",
+ "function":"timer",
+ "data":{"value":60000},
+ "to":"start"
+}
+
+]
+
+}
+
