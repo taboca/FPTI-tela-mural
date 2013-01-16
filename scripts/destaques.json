@@ -5,7 +5,7 @@
  "about":"start",
  "function":"saveRSS",
  "expiretimer":10000, 
- "data":{"value":"http://2012.latinoware.org/pt/feed/","about":"destaques"}, "to":"next"
+ "data":{"value":"http://172.25.59.21/?q=rss.xml","about":"destaques"}, "to":"next"
 }, 
 {
  "about":"next",
