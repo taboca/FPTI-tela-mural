@@ -37,6 +37,7 @@
 
 var app =  {
 	feedURL : URL_NOTICIAS,
+    MAX_ITEMS: 2,
 	feed    : null, 
 	start : function() {
 
@@ -83,7 +84,7 @@ var app =  {
 			k.className="item";
 
 			this.total++;
-			if(this.total>3) { 
+			if(this.total>this.MAX_ITEMS) { 
 				var localItem = $($('div.item')[0]);
 				var title = localItem.find('h3').text();
 				var desc = localItem.find('.desc').text();
@@ -95,13 +96,13 @@ var app =  {
 				setTimeout(function() { $($("div.item")[0]).remove() } ,2000);
 				setTimeout(function() { $($("div.itemshadow")[0]).remove() } ,2000);
 
-			        $("div.item")[0].setAttribute("style","-moz-transition-property: margin-top;-moz-transition-duration:1s;margin-top:-72px ");
+			        $("div.item")[0].setAttribute("style","-moz-transition-property: margin-top;-moz-transition-duration:1s;margin-top:-110px ");
 
 
 
 				this.total--;
 			} 
-			setTimeout( function () { self.render() }, 10000);
+			setTimeout( function () { self.render() }, 22000);
 		} 
 	},
 
