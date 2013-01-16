@@ -102,7 +102,7 @@ var app =  {
 
 				this.total--;
 			} 
-			setTimeout( function () { self.render() }, 22000);
+			setTimeout( function () { self.render() }, 16000);
 		} 
 	},
 
