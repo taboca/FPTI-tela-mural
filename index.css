@@ -9,11 +9,11 @@ html, body { margin:0; padding:0; color:white; overflow:hidden }
 } 
 
 /*
+  background: -moz-radial-gradient( -30% -30%, elipse , white, rgba(5,50,150,1));
 */
 body { 
   width:1920px; height:1080px;
-  background: linear-gradient(180deg, rgba(100,150,250,1), rgba(50,100,200,1), rgba(50,50,150,1), rgba(50,100,200,1));
-  background: -moz-radial-gradient( 0% 0%, ellipse , white, rgba(50,100,200,1));
+  background: linear-gradient(180deg, rgba(100,150,250,1),  rgba(200,200,250,1), rgba(50,100,200,1), rgba(50,100,200,1));
 } 
 
 .viewport2 { 
@@ -43,7 +43,7 @@ body {
   margin-top:20px;
   border-radius:25px;
   overflow:hidden;
-  background: linear-gradient(180deg, rgba(0,0,0,.5), rgba(0,0,0,0), rgba(0,0,0,0));
+  background: linear-gradient(180deg, rgba(0,0,0,.5), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0));
 } 
 
 .inner4 { 
