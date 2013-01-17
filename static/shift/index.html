@@ -11,6 +11,12 @@
 <script src="../focus.js"></script>
 -->
 <script>
+
+    function start() { 
+    	register("/main/target", "mapa", 'mapa.html', iframeTemplate);
+    	compile();
+    }
+
 function setFrame(src) {
 	register("/main/target", "mapa", src, iframeTemplate);
 	compile();
@@ -24,21 +30,37 @@ function setFrame(src) {
     margin:10px;
     width:100px; height:92px;
   } 
+    
+  .inner img { 
+      margin:auto;
+      width:90px; 
+      height:90px; 
+  } 
+   
+  #target { padding:0; 
+            width:840px; 
+            margin:0;
+            height:412px; 
+            border-top-left-radius:20px;
+            border-bottom-left-radius:20px;
+            overflow:hidden
+        } 
 </style>
 </head>
-<body id='main' >
+<body id='main' onload='start()'>
 
 <table>
 <tr>
 <td valign='top'>
-<div id='target' style='width:810px;height:400px'>
+<div id='target'>
 
 </div>
 </td>
 <td valign='top'>
-<div class='inner' onclick='setFrame("mapa.html")'> </div>
-<div class='inner' onclick='setFrame("video.html")'> </div>
-<div class='inner' onclick='setFrame("http://172.25.59.22:8888/static/grid-calendar/index.html")'> </div>
+    <div class='inner' onclick='setFrame("video.html")'><img src='icon1.png' /> </div>
+    <div class='inner' onclick='setFrame("http://172.25.59.22:8888/static/grid-calendar/index.html")'> <img src='icon2.png' /> </div>
+    <div class='inner' onclick='setFrame("mapa.html")'> <img src='icon3.png' /> </div>
+    <div class='inner' onclick='setFrame("bus.html")'> <img src='icon4.png' /> </div>
 </td>
 </tr>
 </table>
