@@ -2,29 +2,17 @@
 
 html, body { margin:0; padding:0; overflow:hidden } 
 
+body { margin-top:7px} 
 
 * { 
   font-family: 'Varela', sans-serif;
 } 
 
-h1 { 
-   margin-left:0em;
-   font-size:30px;
-   margin-bottom:0;
-   padding-left:1em;
-   color:white;
-   background-color:rgba(0,0,0,.1);
-   font-weight:bold;
-}
-
 .datedate, .datetime  { 
-  font-size:160%;
+  font-size:22pt;
   color:#444;
   font-weight:bold;
-  padding: 4px 20px 4px 20px;
   text-align:right;
 } 
 
-.datedate { 
-  text-align:left;
-} 
+
