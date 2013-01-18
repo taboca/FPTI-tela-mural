@@ -12,15 +12,29 @@
 -->
 <script>
 
+    var cicle = ["video.html","http://172.25.59.22:8888/static/grid-calendar/index.html","mapa.html", "bus.html"];
+
+    var index = 0;
     function start() { 
-    	register("/main/target", "mapa", 'mapa.html', iframeTemplate);
-    	compile();
+    	load("#target", cicle[index], iframeTemplate);
+        index++;
+        if(index>3) { 
+            index=0;
+        }
+        setTimeout('start()',15000);
     }
 
-function setFrame(src) {
-	register("/main/target", "mapa", src, iframeTemplate);
-	compile();
-} 
+    function setFrame(src) {
+        load("#target", src, iframeTemplate);
+    } 
+
+    function load(rule, src) { 
+        // iframeTemplate data is in lib choreographer
+	    $(rule).html(iframeTemplate.data);
+ 	    $(rule+" iframe").attr("src",src);
+	    // $(rule+" iframe").load(callbackFunction);
+    } 
+
 </script>
 <head>
 <style>

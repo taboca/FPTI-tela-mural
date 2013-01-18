@@ -91,7 +91,6 @@ try {
 	var curr = byId[id];
 //	delete pending[item.rule];
 
-
 	var pathToRules = rule.split("/");
 	var sum = "";
 	for(var i in pathToRules) { 
@@ -137,7 +136,6 @@ var cc = {
             doc.getElementById(target).dispatchEvent(evt);
    }
 } 
-
 
 function filter(query) { 
     var text = "";
