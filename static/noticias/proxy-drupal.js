@@ -15,8 +15,12 @@ doFilter = function (that) {
 	descFull+=lines[k];
  }   
 
- var slides = plainDesc.split('slide')[1];
- var src = 'http'+slides.split('http')[1];
+ var src='';
+
+ if(plainDesc.indexOf('slide')>-1) { 
+    var slides = plainDesc.split('slide')[1];
+    src = 'http'+slides.split('http')[1];
+ } 
 	
  return {'title':title, 'subtitle':desc, 'body': descFull, 'src':src};
 
