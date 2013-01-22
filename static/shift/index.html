@@ -16,15 +16,21 @@
 
     var index = 0;
     function start() { 
-    	load("#target", cicle[index], iframeTemplate);
+        var currId = 's'+parseInt(index+1);
+    	setFrame("#target", document.getElementById(currId), iframeTemplate);
         index++;
         if(index>3) { 
             index=0;
         }
+
         setTimeout('start()',15000);
     }
 
-    function setFrame(src) {
+    function setFrame(src,that) {
+        $('.inner').removeClass('highlight');
+        var myId = that.getAttribute('id');
+        var src= that.getAttribute('data-target');
+        $('#'+myId).addClass('highlight');
         load("#target", src, iframeTemplate);
     } 
 
@@ -38,17 +44,23 @@
 </script>
 <head>
 <style>
+
+  .highlight { 
+      opacity:1 ! important;
+  }
+
   .inner { 
     background-color:rgba(255,255,255,.5);
     border-radius:0px 20px 20px 0 ;
+    opacity:.3;
     margin:10px;
     width:100px; height:92px;
-  } 
+  }
     
   .inner img { 
-      margin:auto;
-      width:90px; 
-      height:90px; 
+    margin:auto;
+    width:90px; 
+    height:90px; 
   } 
    
   #target { padding:0; 
@@ -71,10 +83,10 @@
 </div>
 </td>
 <td valign='top'>
-    <div class='inner' onclick='setFrame("video.html")'><img src='icon1.png' /> </div>
-    <div class='inner' onclick='setFrame("http://172.25.59.22:8888/static/grid-calendar/index.html")'> <img src='icon2.png' /> </div>
-    <div class='inner' onclick='setFrame("mapa.html")'> <img src='icon3.png' /> </div>
-    <div class='inner' onclick='setFrame("bus.html")'> <img src='icon4.png' /> </div>
+    <div class='inner' id='s1' data-target='video.html' onclick='setFrame(this)'><img src='icon1.png' /> </div>
+    <div class='inner' id='s2' data-target='http://172.25.59.22:8888/static/grid-calendar/index.html' onclick='setFrame(this)'> <img src='icon2.png' /> </div>
+    <div class='inner' id='s3' data-target='mapa.html' onclick='setFrame(this)'> <img src='icon3.png' /> </div>
+    <div class='inner' id='s4' data-target='bus.html' onclick='setFrame(this)'> <img src='icon4.png' /> </div>
 </td>
 </tr>
 </table>
