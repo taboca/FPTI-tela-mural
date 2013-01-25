@@ -116,12 +116,15 @@ var app =  {
                 this.tweetRepeated = {};
 		var self  = this; 
 		var cc=0;
-     		$(result.xmlDocument).find('item').each(function(){
 
-			var out = doFilter(this); 
-                        self.tweetQueue.push( '<div class=""><h3>'+out.title+'</h3><div class="desc">'+out.subtitle+'</div><div class="descFull" style="display:none">'+out.body+'</div><img src="'+out.src+'" style="display:none"/></div>' );
-                        cc++;
-                });
+  		$(result.xmlDocument).find('item').each(function(){
+
+          if(cc<5) { 
+            var out = doFilter(this); 
+            self.tweetQueue.push( '<div class=""><h3>'+out.title+'</h3><div class="desc">'+out.subtitle+'</div><div class="descFull" style="display:none">'+out.body+'</div><img src="'+out.src+'" style="display:none"/></div>' );
+          } 
+          cc++;
+        });
 
 		var self = this;
 		self.render();
