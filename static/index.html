@@ -36,23 +36,23 @@
 <script>
 	function start() { 
 		tv.setup(document);
-
-
         aMask();
-
-         
 	} 
+
+    var iList = ['vermelho','amarelo','azul']
 
     function aMask() { 
         x = parseInt(Math.random()*1820); 
         y = parseInt(Math.random()*680);
+
+        var image = './mask/'+iList[parseInt(Math.random()*3)]+'.png';
 
         x+=100;
         y+=400;
         x-=1920;
         y-=1080;
 
-        var moz = "-moz-transition-property: -moz-transform; -moz-transition-duration:3s;-moz-transform:translate("+x+"px,"+y+"px);"; 
+        var moz = "-moz-transition-property: -moz-transform; -moz-transition-duration:3s;-moz-transform:translate("+x+"px,"+y+"px);background:url("+image+")"; 
 	    document.getElementById('mask').setAttribute("style", moz);
 
         setTimeout('aMask()',3500);
@@ -62,8 +62,7 @@
 
 <body id="main" onload='start()'>
 
-    <div id='mask' >
-</div>
+<div id='mask' > </div>
 <div class='viewport2' >
 
 <div style="width:1920px;height:90px" class="c gv">
