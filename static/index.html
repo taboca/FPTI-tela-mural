@@ -6,11 +6,6 @@
     <link media="screen, projection" type="text/css" href="lib/base.css" rel="stylesheet">
     <link media="screen, projection" type="text/css" href="lib/tagvisor.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="index.css">
-    <script type="text/javascript" src="https://www.google.com/jsapi">
-    </script>
-    <script type="text/javascript">
-      google.load("webfont", "1");
-    </script>
 <script src="vendor/jquery-min.js"></script>
 <script src="const.js"></script>
 <!--
@@ -45,17 +40,17 @@
 
     function aMask() { 
         x = parseInt(Math.random()*1820); 
-        y = parseInt(Math.random()*680);
+        y = parseInt(Math.random()*780);
 
-        x+=100;
-        y+=400;
+        x+=00;
+        y+=200;
         x-=1920;
         y-=1080;
 
         var moz = "-moz-transition-property: -moz-transform; -moz-transition-duration:3s;-moz-transform:translate("+x+"px,"+y+"px);background:url("+image+")"; 
 	    document.getElementById('mask').setAttribute("style", moz);
 
-        setTimeout('aMask()',3500);
+        setTimeout('aMask()',3200);
     } 
 </script>
 </head>
