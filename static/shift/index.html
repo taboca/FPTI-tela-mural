@@ -12,26 +12,27 @@
 -->
 <script>
 
-    var cicle = ["midia.html","http://172.25.59.22:8888/static/grid-calendar/index.html","mapa.html", "onibus.html"];
+    var cicle = ["midia.html","midia1.html","midia2.html", "midia3.html","http://172.25.59.22:8888/static/grid-calendar/index.html","mapa.html", "onibus.html"];
+    var strId = ["s1","s1","s1","s1","s2","s3", "s4"];
 
     var index = 0;
     function start() { 
-        var currId = 's'+parseInt(index+1);
-    	setFrame("#target", document.getElementById(currId), iframeTemplate);
+        var currId = strId[parseInt(index)];
+    	setFrame("#target", parseInt(index), document.getElementById(currId), iframeTemplate);
         index++;
-        if(index>3) { 
+        if(index>5) { 
             index=0;
         }
 
         setTimeout('start()',15000);
     }
 
-    function setFrame(src,that) {
+    function setFrame(src,iii, that) {
         $('.inner').removeClass('highlight');
         var myId = that.getAttribute('id');
         var src= that.getAttribute('data-target');
         $('#'+myId).addClass('highlight');
-        load("#target", src, iframeTemplate);
+        load("#target", cicle[iii] , iframeTemplate);
     } 
 
     function load(rule, src) { 
