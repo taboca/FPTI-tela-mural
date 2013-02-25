@@ -5,7 +5,7 @@ register("/main/wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww", "destaques", "./desta
 register("/main/eeeeeeeeeeeeeeeeeeeeeeee", "0.7342910511830653", "./noticias/index.html", iframeTemplate);
 register("/main/rrrrrrrrrrrrrrrrrrrrrrrr", "0.8204470457591272", "./shift/index.html", iframeTemplate);
 register("/main/ttttttttttttttt", "0.8841019960292364", "./news/index.html", iframeTemplate);
-//register("/main/yyyyyyyyy", "0.8448067060305994", "./weather/index.html", iframeTemplate);
+register("/main/yyyyyyyyy", "0.8448067060305994", "./weather/index.html", iframeTemplate);
 register("/main/uuuuuuuuuuuuuuuu", "0.13553831341819889", "./twitter/index.html", iframeTemplate);
 
    compile();   
