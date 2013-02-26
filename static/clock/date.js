@@ -39,7 +39,7 @@
 var tempoWidget =  {
 	feed: null, 
 	elementClock  : null, 
-        mos: ['Janeiro','Fevereito','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+        mos: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
 	start : function () { 
 		var mainDiv = document.createElement('div');
 		document.body.appendChild(mainDiv);
