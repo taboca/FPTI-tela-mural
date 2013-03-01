@@ -4,13 +4,12 @@
 {
  "about":"start",
  "function":"spawnJS",
- "expiretimer":10000, 
  "data":{"value":"mergeTwitter.js","about":"pti_brasil"}, "to":"next"
 }, 
 {
  "about":"next",
  "function":"timer",
- "data":{"value":6000000},
+ "data":{"value":10000},
  "to":"start"
 }
 
