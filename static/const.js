@@ -7,6 +7,7 @@ URL_GALERIA =  "http://localhost:8888/channel-store-images/localpictures";
 URL_GALERIA =  "http://api.flickr.com/services/feeds/photos_public.gne?id=98393462@N00&tags=jet4learning&lang=en-us&format=";
 URL_TYPING = "http://g1.globo.com/dynamo/ciencia-e-saude/rss2.xml";
 URL_TYPING = "/channel/destaques.xml";
+URL_TWIT = "/channel/pti_brasil.txt";
 URL_WEATHER = "http://weather.yahooapis.com/forecastrss?w=449704&u=c";
 URL_GRADE ="/channel-store/grade";
 

@@ -54,13 +54,18 @@ var t8l = {
 
 var t8l_Feed = function (url) { 
 	this.url=url;
+    this.dataType='xml';
+
  	this.setNumEntries = function ( val ) { } 
         this.setResultFormat = function (data) {  
 		// we ignore for now, this is for GOogle compatibility 
+        if(data=='text') {
+          this.dataType="text";
+        }
 	} ;
 
 	this.load = function ( functionSuccess ) { 
-            $.ajax( { type:"GET", url: this.url, dataType: "xml", success: function (xml) { 
+            $.ajax( { type:"GET", url: this.url, dataType: this.dataType, success: function (xml) { 
                var result = { xmlDocument:xml } 
                functionSuccess(result);
             }, error: function (xhr, ajaxOptions, thrownError) { 
