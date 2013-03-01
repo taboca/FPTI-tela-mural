@@ -73,7 +73,7 @@ var app =  {
 		var counter = 0;
 		var self = this;
 		if(this.tweetQueue.length<1) { 
-			setTimeout( function(){self.updateFeed()},1000);
+			setTimeout( function(){self.updateFeed()},20000);
 		} else { 
 			var k = document.createElement('div');
 			k.className="item";
@@ -104,7 +104,7 @@ var app =  {
 
 				this.total--;
 			} 
-			setTimeout( function () { self.render() }, 10000);
+			setTimeout( function () { self.render() }, 20000);
 		} 
 	},
 
