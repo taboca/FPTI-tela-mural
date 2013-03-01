@@ -104,7 +104,7 @@ var app =  {
 
 				this.total--;
 			} 
-			setTimeout( function () { self.render() }, 2000);
+			setTimeout( function () { self.render() }, 10000);
 		} 
 	},
 
