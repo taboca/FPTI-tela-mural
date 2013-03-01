@@ -68,6 +68,17 @@ var app =  {
 	} ,
 
     total:0,
+    flipflop:true,
+
+    flip: function () { 
+
+             if(this.flipflop) { 
+                 this.flipflop=false; return 'color:black';
+             } 
+             else { 
+                 this.flipflop=true; return 'color:gray';
+             } 
+    },
 
 	render : function() {
 		var counter = 0;
@@ -84,6 +95,11 @@ var app =  {
 			this.element.appendChild(k);
 			this.element.appendChild(kk);
 			k.className="item";
+
+			var localItem = $($('div.item'));
+            var llLength = localItem.length;
+			var localItem = $($('div.item')[llLength-1]);
+            localItem.find('h3').attr('style',''+self.flip()+' ! important');
 
 			this.total++;
 			if(this.total>this.MAX_ITEMS) { 
