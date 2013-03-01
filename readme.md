@@ -4,3 +4,7 @@ These are 'app' project and are compatible with Node JS based TelaSocial Mediato
 
 * [TelaSocial Mediator](https://github.com/taboca/TelaSocial-Mediator)
 
+
+## Notes - manual work 
+
+actions dir -> you need to replace in the TelaSocial Mediator actions - so far 
