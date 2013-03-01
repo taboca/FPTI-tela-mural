@@ -18,8 +18,8 @@ export HOME=/root
 
 case "$1" in
   start)
-    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/httpserver.json
-    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/twitter.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/root/TelaSocial-Mediator start mediator.js app ./scripts/httpserver.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/root/TelaSocial-Mediator start mediator.js app ./scripts/twitter.json
     ;;
   stop)
     exec /usr/local/bin/forever stopall
