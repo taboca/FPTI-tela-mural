@@ -19,6 +19,8 @@
 	margin-left:.8em;
     margin-right:1em;
 	height:55px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     } 
     div h3 { 
 	font-size:24px;
