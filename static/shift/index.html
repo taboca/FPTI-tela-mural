@@ -14,17 +14,19 @@
 
     var cicle = ["midia.html","midia1.html","midia2.html", "midia3.html","http://172.25.59.22:8888/static/grid-calendar/index.html","mapa.html", "onibus.html"];
     var strId = ["s1","s1","s1","s1","s2","s3", "s4"];
+    var timers = [15000,15000,15000,15000,15000,15000, 30000];
+
 
     var index = 0;
     function start() { 
         var currId = strId[parseInt(index)];
     	setFrame("#target", parseInt(index), document.getElementById(currId), iframeTemplate);
+        setTimeout('start()',timers[index]);
         index++;
         if(index>6) { 
             index=0;
         }
 
-        setTimeout('start()',15000);
     }
 
     function setFrame(src,iii, that) {
