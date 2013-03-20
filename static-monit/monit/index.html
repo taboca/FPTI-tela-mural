@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../base.css">
+<script src="../vendor/jquery-min.js"></script>
+<script src="../focus.js"></script>
+<script>
+
+var initialSrc; 
+
+function s1() {
+  if(document.location.toString().indexOf("url")>-1) {
+    var param = document.location.toString().split("url=")[1];
+    initialSrc = param.split('mini')[0];
+    $('#im').attr('src',param);
+  }
+}
+
+function zoomNormal() { 
+    $('#im').attr('src',initialSrc+'mini.jpg');
+} 
+
+function zoomScaled() { 
+    $('#im').attr('src',initialSrc+'current.jpg');
+} 
+</script>
+</head>
+
+<body onload='s1()'>
+<img id='im' src='' width='100%' height='100%'/>
+</body>
+
+</html>
