@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <link media="screen, projection" type="text/css" href="../lib/base.css" rel="stylesheet">
+<head>
+<style>
+html, body { margin:0 } 
+</style>
+
+<script>
+    function start() { 
+
+      if(document.location.toString().indexOf("image")>-1) { 
+          var param = document.location.toString().split("image=");
+          el = document.createElement('img');
+          el.style.margin=0;
+          el.style.padding=0;
+          el.src=param[1];
+          document.body.appendChild(el);
+      }
+
+      if(document.location.toString().indexOf("url")>-1) { 
+          var param = document.location.toString().split("url=");
+          el = document.createElement('iframe');
+          el.style.margin=0;
+          el.style.padding=0;
+          el.style.width='840px';
+          el.frameBorder=0;
+          el.style.height='420px';
+          el.src=param[1];
+          document.body.appendChild(el);
+      }
+
+    }
+</script>
+</head>
+<body onload="start()">
+</body>
+</html>

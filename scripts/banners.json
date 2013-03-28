@@ -1,0 +1,20 @@
+{
+"rules": [
+
+{
+ "about":"start",
+ "function":"saveRSS",
+ "expiretimer":10000, 
+ "data":{"value":"http://172.25.59.21/?q=flyers.xml","about":"banners"}, "to":"next"
+}, 
+{
+ "about":"next",
+ "function":"timer",
+ "data":{"value":60000},
+ "to":"start"
+}
+
+]
+
+}
+

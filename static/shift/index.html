@@ -1,98 +1,32 @@
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <link media="screen, projection" type="text/css" href="../base.css" rel="stylesheet">
-    <link media="screen, projection" type="text/css" href="../lib/hdgrid.css" rel="stylesheet">
-    <link media="screen, projection" type="text/css" href="../lib/tagvisor.css" rel="stylesheet">
-<script src="../vendor/jquery-min.js"></script>
-<script src="../lib/choreographer.js"></script>
-<script src="../lib/tagvisor.js"></script>
-<script src="../const.js"></script>
-<!--
-<script src="../focus.js"></script>
--->
-<script>
+    <link media="screen, projection" type="text/css" href="app.css" rel="stylesheet">
+    <script src="../vendor/jquery-min.js" type="text/javascript"></script>
+    <script src="../lib/proxy.js" type="text/javascript"></script>
+    <script src="../config/proxy.js" type="text/javascript"></script>
 
-    var cicle = ["midia.html","midia1.html","midia2.html", "midia3.html","http://172.25.59.22:8888/static/grid-calendar/index.html","mapa.html", "onibus.html"];
-    var strId = ["s1","s1","s1","s1","s2","s3", "s4"];
-    var timers = [15000,15000,15000,15000,15000,15000, 30000];
+    <script src="../const.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <script src="app2.js" type="text/javascript"></script>
+    <script src="proxy-drupal.js" type="text/javascript"></script>
 
-
-    var index = 0;
-    function start() { 
-        var currId = strId[parseInt(index)];
-    	setFrame("#target", parseInt(index), document.getElementById(currId), iframeTemplate);
-        setTimeout('start()',timers[index]);
-        index++;
-        if(index>6) { 
-            index=0;
-        }
-
-    }
-
-    function setFrame(src,iii, that) {
-        $('.inner').removeClass('highlight');
-        var myId = that.getAttribute('id');
-        var src= that.getAttribute('data-target');
-        $('#'+myId).addClass('highlight');
-        load("#target", cicle[iii] , iframeTemplate);
-    } 
-
-    function load(rule, src) { 
-        // iframeTemplate data is in lib choreographer
-	    $(rule).html(iframeTemplate.data);
- 	    $(rule+" iframe").attr("src",src);
-	    // $(rule+" iframe").load(callbackFunction);
-    } 
-
-</script>
-<head>
-<style>
-
-  .highlight { 
-      opacity:1 ! important;
-  }
-
-  .inner { 
-    background-color:rgba(255,255,255,.5);
-    border-radius:0px 20px 20px 0 ;
-    opacity:.3;
-    margin:10px;
-    width:100px; height:92px;
-  }
+    <!-- maybe this can be moved to afterProxyRun... --> 
+    <script type="text/javascript">
+     t8l.loaded(function () { 
+	app.init();
+	app.start();
+     }); 
+    </script>
     
-  .inner img { 
-    margin:auto;
-    width:90px; 
-    height:90px; 
-  } 
-   
-  #target { padding:0; 
-            width:840px; 
-            margin:0;
-            height:412px; 
-            border-top-left-radius:20px;
-            border-bottom-left-radius:20px;
-            overflow:hidden
-        } 
-</style>
-</head>
-<body id='main' onload='start()'>
+  </head>
+  <body style='text-align:center'>
 
-<table>
-<tr>
-<td valign='top'>
-<div id='target'>
-
-</div>
-</td>
-<td valign='top'>
-    <div class='inner' id='s1' data-target='midia.html' onclick='setFrame(this)'><img src='icon1.png' /> </div>
-    <div class='inner' id='s2' data-target='http://172.25.59.22:8888/static/grid-calendar/index.html' onclick='setFrame(this)'> <img src='icon2.png' /> </div>
-    <div class='inner' id='s3' data-target='mapa.html' onclick='setFrame(this)'> <img src='icon3.png' /> </div>
-    <div class='inner' id='s4' data-target='onibus.html' onclick='setFrame(this)'> <img src='icon4.png' /> </div>
-</td>
-</tr>
-</table>
-
+    <div class='inner' id='midia' data-target='midia.html' onclick='setFrame(this)'><img src='icon1.png' /> </div>
+    <div class='inner' id='agenda' data-target='http://172.25.59.22:8888/static/grid-calendar/index.html' onclick='setFrame(this)'> <img src='icon2.png' /> </div>
+    <div class='inner' id='mapa' data-target='mapa.html' onclick='setFrame(this)'> <img src='icon3.png' /> </div>
+    <div class='inner' id='onibus' data-target='onibus.html' onclick='setFrame(this)'> <img src='icon4.png' /> </div>
+    <div id='temp' style='display:none'></div>
 </body>
 </html>

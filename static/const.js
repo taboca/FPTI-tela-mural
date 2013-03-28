@@ -15,6 +15,7 @@ URL_GRADE ="/channel-store/grade";
 
 URL_NOTICIAS = "/channel/destaques.xml";
 URL_NOTICIAS2 = "/channel/noticias.xml";
+URL_BANNERS = "/channel/banners.xml";
 
 TEMPO_INICIO_MIDIA = 5000; 
 TEMPO_REFRESH_MIDIA = 80000; 

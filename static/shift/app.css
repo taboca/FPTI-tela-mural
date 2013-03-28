@@ -1,0 +1,26 @@
+  .highlight { 
+      opacity:1 ! important;
+  }
+
+  .inner { 
+    background-color:rgba(255,255,255,.5);
+    border-radius:0px 20px 20px 0 ;
+    opacity:.3;
+    margin:10px;
+    width:100px; height:92px;
+  }
+    
+  .inner img { 
+    margin:auto;
+    width:90px; 
+    height:90px; 
+  } 
+   
+  #target { padding:0; 
+            width:840px; 
+            margin:0;
+            height:412px; 
+            border-top-left-radius:20px;
+            border-bottom-left-radius:20px;
+            overflow:hidden
+        } 
