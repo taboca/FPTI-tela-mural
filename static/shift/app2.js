@@ -3,7 +3,7 @@
 
     function setThumb(expression) {
         $('.inner').removeClass('highlight');
-        var choice = '';
+        var choice = 'midia';
         for(var l in strId) { 
             var item = strId[l];
             if(expression.indexOf(item)>-1) { 
