@@ -1,0 +1,49 @@
+<html>
+    <head>
+
+          <style>
+              div.panel { color:white; margin-top:0px;background-color:; width:230px; height:140px; display:inline-block; margin:0px; overflow:hidden;} iframe { margin-top:0px; border:0px solid red; width:220px; height:130px; overflow:hidden;padding:0  } 
+          
+              body { background:black} 
+          </style>
+
+        <script type="text/javascript" src="http://www.telasocial.com/script/jquery.js"></script>
+        <script type="text/javascript" src="lib/tagvisor.js"></script>
+        <script>
+
+            function start() { 
+                  if(document.location.toString().indexOf("mode")>-1) { 
+                   var param = document.location.toString().split("mode=");
+                   if(param[1]=="tv") {
+                      tv.add($('#animation li'));
+                      tv.tickMode = true;
+                      tv.play();
+                   } 
+                }
+                setTimeout('start()',40000);
+
+          }
+
+        </script>
+
+
+    </head>
+        <body onload="start()">
+        <ul style='display:none' id='animation'>
+            <li data-target='slide0' data-time="1s" data-effect="scalefit" data-duration="5s" />
+            <li data-target='slide1' data-time="20s" data-effect="scalefit" data-duration="5s" />
+        </ul>
+
+        <div id='slide1' style='width:1280px;height:768px;text-align:center;-moz-transform-origin:0 0 ;overflow:hidden'>
+
+            <iframe style='width:1280px;height:720px' width="1280" height="720" src='mini.html'></iframe>
+
+        </div>
+        </div>
+        <div id='slide0' style='width:1280px;height:768px; overflow:hidden; text-align:center'>
+
+            <iframe style='width:1280px;height:720px' width="1280" height="720" src='all3.html'></iframe>
+    </div>
+
+    </body>
+</html>
