@@ -1,5 +1,5 @@
 var sys = require("sys"),
-    path = require("path"),
+    pathFS = require("path"),
     fs = require("fs")
     url = require("url"),
     http = require("http"),
@@ -13,7 +13,7 @@ var timer = null;
 console.log(config);
 var URL = config.url_eventos_pti;
 
-function initApp(name) {
+function initApp(name, appPath) {
 
 	var buffer = "";
 
@@ -73,19 +73,20 @@ function initApp(name) {
 
       var buffJSON = [];
       for(var i=0;i<collections.length;i++) { 
-	for(var j=0;j<collections[i].length;j++) { 
-  	   buffJSON.push(collections[i][j]);
-	} 
+        for(var j=0;j<collections[i].length;j++) { 
+          buffJSON.push(collections[i][j]);
+        } 
       } 
-      strOut= JSON.stringify(buffJSON);
 
-      fs.writeFile('channel/'+name+'.txt', strOut, 'utf8', function(err){
-       if (err) { 
-         out.senderr({'result':'error', 'payload': err});
-         throw err; 
-       }   
-       out.send({'result':'ok'});
-       clearTimeout(timer);
+      strOut= JSON.stringify(buffJSON);
+      var filePath = pathFS.join( appPath, 'channel', name+'.txt');
+      fs.writeFile( filePath, strOut, 'utf8', function(err){
+        if (err) { 
+            out.senderr({'result':'error', 'payload': err});
+            throw err; 
+        }   
+        out.send({'result':'ok'});
+        clearTimeout(timer);
       });
    });
 
@@ -95,5 +96,6 @@ function initApp(name) {
 
 out.send({'result':'note', 'data':'JS running '+ process.argv[1] } );
 timer = setTimeout(function () { out.send({'result':'expired'}) },15000); 
+
 initApp(process.argv[2], process.argv[3]);
 
