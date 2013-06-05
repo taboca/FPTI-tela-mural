@@ -111,7 +111,7 @@ var app =  {
 
 	__feedUpdated : function(result) {
 
-                this.tweetRepeated = {};
+        this.tweetRepeated = {};
 		var self  = this; 
 		var cc=0;
 
@@ -123,9 +123,9 @@ var app =  {
           cc++;
         });
 
-                self.tweetQueue.push( '<div style="display:none"><h3></h3><div class="desc">agenda</div><div class="descFull" style="display:none">frame</div><img src="http://172.25.59.22:8888/static/grid-calendar/index.html" /></div>' );
-                self.tweetQueue.push( '<div style="display:none"><h3></h3><div class="desc">mapa</div><div class="descFull" style="display:none">frame</div><img src="../shift/mapa.html" /></div>' );
-                self.tweetQueue.push( '<div style="display:none"><h3></h3><div class="desc">onibus</div><div class="descFull" style="display:none">frame</div><img src="../shift/onibus.html" /></div>' );
+        self.tweetQueue.push( '<div style="display:none"><h3></h3><div class="desc">agenda</div><div class="descFull" style="display:none">frame</div><img src="/grid-calendar/index.html" /></div>' );
+        self.tweetQueue.push( '<div style="display:none"><h3></h3><div class="desc">mapa</div><div class="descFull" style="display:none">frame</div><img src="../shift/mapa.html" /></div>' );
+        self.tweetQueue.push( '<div style="display:none"><h3></h3><div class="desc">onibus</div><div class="descFull" style="display:none">frame</div><img src="../shift/onibus.html" /></div>' );
 
 		var self = this;
 		self.render();
