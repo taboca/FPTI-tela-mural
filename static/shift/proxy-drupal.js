@@ -24,7 +24,7 @@ doFilter = function (that) {
  if (docDate>=today) {
     src = ($('#temp img').attr('src'));
  } else {
-    var rPick = parseInt(Math.random()); 
+    var rPick = Math.round(Math.random()*1) + 1
     src = backupList[rPick]; //'http://172.25.59.21/sites/default/files/midia-03.png';
 
  } 
