@@ -18,13 +18,13 @@ export HOME=/root
 
 case "$1" in
   start)
-    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/ptitela/TelaSocial-Mediator start mediator.js app ./scripts/httpserver.json
-    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/ptitela/TelaSocial-Mediator start mediator.js app ./scripts/destaques.json
-    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/ptitela/TelaSocial-Mediator start mediator.js app ./scripts/banners.json
-    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/ptitela/TelaSocial-Mediator start mediator.js app ./scripts/twitter-grab.json
-    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/ptitela/TelaSocial-Mediator start mediator.js app ./scripts/noticias.json
-    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/ptitela/TelaSocial-Mediator start mediator.js app ./scripts/screenshots.json
-    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/ptitela/TelaSocial-Mediator start mediator.js app ./scripts/salas.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/httpserver.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/destaques.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/banners.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/twitter-grab.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/noticias.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/screenshots.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/salas.json
     ;;
   stop)
     exec /usr/local/bin/forever stopall
