@@ -1,0 +1,117 @@
+<html>
+<head>
+    <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link media="screen, projection" type="text/css" href="lib/hdgrid.css" rel="stylesheet">
+    <link media="screen, projection" type="text/css" href="lib/base.css" rel="stylesheet">
+    <link media="screen, projection" type="text/css" href="lib/tagvisor.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+<script src="vendor/jquery-min.js"></script>
+<script src="const.js"></script>
+<!--
+<script src="lib/tagvisor.js"></script>
+-->
+<script src="lib/choreographer.js"></script>
+<script src="index-crv.js"></script>
+<script src="zoom.js"></script>
+<style>
+    /*
+
+        width:3840px;height:2160px;-moz-transform-origin:0 0;-moz-transition-property: -moz-transform; -moz-transform:translate(0px,0px);background: -moz-radial-gradient( 50% 50%, circle ,rgba(0,0,0,0), rgba(0,0,0,0), black, black, black, black, black, black, black, black, black);
+    */
+    #mask  { 
+        position:absolute;
+
+        background:url(./mask/img2.png) no-repeat; 
+        width:3840px; 
+        height:2160px;
+    }
+
+</style>
+<script>
+	function start() { 
+		tv.setup(document);
+        //aMask();
+	} 
+
+    var iList = ['vermelho','amarelo','azul', 'verde']
+
+    var image = './mask/'+iList[parseInt(Math.random()*4)]+'.png';
+
+    function aMask() { 
+        x = parseInt(Math.random()*1820); 
+        y = parseInt(Math.random()*780);
+
+        x+=00;
+        y+=200;
+        x-=1920;
+        y-=1080;
+
+        var moz = "-moz-transition-property: -moz-transform; -moz-transition-duration:3s;-moz-transform:translate("+x+"px,"+y+"px);background:url("+image+")"; 
+	    document.getElementById('mask').setAttribute("style", moz);
+
+        setTimeout('aMask()',3200);
+    } 
+</script>
+</head>
+
+<body id="main" onload='start()'>
+
+
+<div class='viewport2' >
+
+<div style="width:1920px;height:90px" class="c gv">
+    <div class="" style='background:none' id="qqqqqqqqqqqqqqqq">qqqqqqqqqqqqqqqq
+    </div>
+</div>
+
+<div class="c gv">
+
+<div class="c gh">
+    <div style="width:960px;height:700px;" class="c gv">
+        <div class="inner"  style=' border-radius:0px;border-top-right-radius:50px' id="wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww">wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+        </div>
+    </div>
+    <div style="width:960px;height:310px" class="c gv">
+        <div class="inner3" style='margin-top:0;border-radius:0' id="eeeeeeeeeeeeeeeeeeeeeeee">eeeeeeeeeeeeeeeeeeeeeeee
+        </div>
+    </div>
+</div>
+
+<div class="c gh">
+
+    <div style='width:960px;height:420px' class='c gv'>
+     <div class="c gv inner2">
+      <div style="width:840px;height:420px" class="c gh">
+       <div id="flyershow">ttttttttttttttt</div>
+      </div>
+      <div style="width:120px;height:420px" class="c gh">
+        <div id="rrrrrrrrrrrrrrrrrrrrrrrr"></div>
+      </div>
+     </div>
+    </div>
+
+    <div style="width:960px;height:260px" class="c gv">
+     <div class="inner2" id="uuuuuuuuuuuuuuuu">uuuuuuuuuuuuuuuu</div>
+    </div>
+
+    <div style='width:960px;height:380px' class='c gv'>
+     <div class="c gv">
+      <div style="width:760px;height:360px" class="c gh">
+       <div class="inner4" id="ttttttttttttttt">ttttttttttttttt</div>
+      </div>
+      <div style="width:200px;height:360px" class="c gh">
+        <div class="inner4" id="yyyyyyyyy"></div>
+      </div>
+     </div>
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+</body></html>
+
