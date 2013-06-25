@@ -1,0 +1,29 @@
+@import url("http://fonts.googleapis.com/css?family=Varela");
+@import url("http://fonts.googleapis.com/css?family=Asap");
+
+
+html, body { margin:0; padding:0; color:white; overflow:hidden } 
+
+* { 
+  font-family: 'Asap', sans-serif;
+} 
+
+body { 
+  width:1080px; height:1920px;
+
+} 
+
+.viewport2 { 
+  background: linear-gradient(180deg, rgba(100,150,250,1),  rgba(200,200,250,1), rgba(50,110,220,1)) url(./header-vertical/bg.png);
+  background: rgba(100,150,250,1) url(./header-vertical/bg.png); 
+  width:1080px; height:1920px;
+} 
+
+.datetime  { 
+  font-size:200%;
+  font-weight:bold;
+  color:white;
+  text-align:right;
+  text-shadow:3px 3px 3px black;
+} 
+

@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <link media="screen, projection" type="text/css" href="base.css" rel="stylesheet">
+    <link media="screen, projection" type="text/css" href="../lib/tagvisor.css" rel="stylesheet">
+<script src="../vendor/jquery-min.js"></script>
+<script src="../lib/choreographer.js"></script>
+<script src="map.js"></script>
+<script src="../lib/tagvisor.js"></script>
+<script>
+
+function animate() { 
+  tv.setup();
+  tv.add($('#animation li'));
+  tv.play();
+} 
+
+
+</script>
+  </head>
+<body onload='animate()' id='main'> 
+
+<table width="1080" height="100" cellpadding='0' border='0' >
+    <tr>
+    <td valign='middle' width='' style='font-size:30pt;padding-left:1em;font-weight:bold' align='center' >
+    Bem-vindo ao Parque Tecnológico Itaipu
+    </td>
+    <td valign='middle' width='340' style='padding-right:1em'>
+        <div id='topright2' style='height:40px;'></div>
+        <div id='topright' style='height:40px;'> </div>
+    </td>
+    </tr>
+</table>
+
+</body>
+</html>
