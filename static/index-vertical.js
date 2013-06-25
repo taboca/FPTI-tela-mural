@@ -10,7 +10,6 @@ register("/main/vertical-right", "0.8448067060305994", "./weather-vertical/index
 //register("/main/uuuuuuuuuuuuuuuu", "0.13553831341819889", "./twitter-new/index.html", iframeTemplate);
 
    compile();   
-   setTimeout('startEngine()',5000);
 });
 
 
