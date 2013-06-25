@@ -2,7 +2,7 @@
 
 html, body { margin:0; padding:0; overflow:hidden } 
 
-body { background-color:black} 
+body { background-color:rgb(0,50,100)} 
 * { 
   font-family: 'Varela', sans-serif;
   color:white;
