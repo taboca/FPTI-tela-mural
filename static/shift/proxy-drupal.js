@@ -1,5 +1,5 @@
 
-var backupList = ["http://172.25.59.21/sites/default/files/midia-02.png","http://172.25.59.21/sites/default/files/midia-03.png"];
+var backupList = ["http://172.25.59.21/sites/default/files/midia-02.png","http://172.25.59.21/sites/default/files/midia-03.png","http://172.25.59.21/sites/default/files/midia_0_0.png"];
 
 doFilter = function (that) { 
 
@@ -20,12 +20,12 @@ doFilter = function (that) {
  var src = '';
 
  var matchClass = $("#temp").text();
-
- if (docDate>=today) {
+ if (docDate.getTime()>=today.getTime()) {
     src = ($('#temp img').attr('src'));
  } else {
-    var rPick = Math.round(Math.random()*1) + 1
+    var rPick = Math.round(Math.random()) ;
     src = backupList[rPick]; //'http://172.25.59.21/sites/default/files/midia-03.png';
+
 
  } 
  return {'title':title, 'subtitle': matchClass, 'body': matchClass, 'src':src};
