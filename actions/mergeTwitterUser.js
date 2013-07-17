@@ -16,7 +16,7 @@ function initApp(name, appPath) {
 var T = new Twit(config.twit);
 
 //var stream = T.stream('statuses/filter', { track: name })
-var stream = T.stream('user', { track:'' })
+var stream = T.stream('user')
 
 var list = new Array() 
 
