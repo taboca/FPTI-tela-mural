@@ -4,7 +4,7 @@
 {
  "about":"start",
  "function":"spawnJS",
- "data":{"value":"mergeTwitterUser.js","about":"pti_brasil"}, "to":"next"
+ "data":{"value":"mergeTwitterUser.js","about":"user_pti_brasil"}, "to":"next"
 }, 
 {
  "about":"next",
