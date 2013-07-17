@@ -1,0 +1,19 @@
+{
+"rules": [
+
+{
+ "about":"start",
+ "function":"spawnJS",
+ "data":{"value":"mergeTwitterUser.js","about":"pti_brasil"}, "to":"next"
+}, 
+{
+ "about":"next",
+ "function":"timer",
+ "data":{"value":10000},
+ "to":"start"
+}
+
+]
+
+}
+
