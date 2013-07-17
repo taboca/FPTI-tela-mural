@@ -7,7 +7,7 @@ register("/main/flyershow", "flyer", "./flyer/index.html", iframeTemplate);
 register("/main/rrrrrrrrrrrrrrrrrrrrrrrr", "shift", "./shift/index.html", iframeTemplate);
 register("/main/ttttttttttttttt", "0.8841019960292364", "./news/index.html", iframeTemplate);
 register("/main/yyyyyyyyy", "0.8448067060305994", "./weather/index.html", iframeTemplate);
-register("/main/uuuuuuuuuuuuuuuu", "0.13553831341819889", "./twitter/index-user-old.html", iframeTemplate);
+register("/main/uuuuuuuuuuuuuuuu", "0.13553831341819889", "./twitter-user/index.html", iframeTemplate);
 
    compile();   
    setTimeout('startEngine()',5000);
