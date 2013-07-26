@@ -1,0 +1,41 @@
+## 
+# Ref article http://labs.telasocial.com/nodejs-forever-daemon/
+
+### BEGIN INIT INFO
+# Provides:             telasocial
+# Required-Start:
+# Required-Stop:
+# Default-Start:        2 3 4 5
+# Default-Stop:         0 1 6
+# Short-Description:    TelaSocial Node App
+### END INIT INFO
+
+export PATH=$PATH:/usr/local/bin
+export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
+
+# This is important for node 
+export HOME=/root 
+
+case "$1" in
+  start)
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/httpserver.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/destaques.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/banners.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/twitter-grab.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/twitter-grab-user.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/twitter-user.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/noticias.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/screenshots.json
+    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/salas.json
+    ;;
+  stop)
+    exec /usr/local/bin/forever stopall
+    ;;
+  *)
+    echo "Usage: /etc/init.d/nodeup {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
+
