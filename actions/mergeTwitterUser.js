@@ -67,7 +67,10 @@ stream.on('tweet', function (tweet) {
 
   for(var k in userUniqueArray) {
          user = userUniqueArray[k];
-         list2.push(user);
+         if(user.user.screen_name == 'pti_brasil') {
+             console.log('!!! found user pti_brasil');
+             list2.push(user);
+         }
   }
   var buffJSON = list2; 
 
