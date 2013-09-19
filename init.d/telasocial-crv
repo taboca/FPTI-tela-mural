@@ -21,9 +21,7 @@ case "$1" in
     /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/httpserver.json
     /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/destaques.json
     /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/banners.json
-    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/twitter-grab.json
     /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/twitter-grab-user.json
-    /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/twitter-user.json
     /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/noticias.json
     /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/screenshots.json
     /usr/local/bin/forever -p /root/.forever --sourceDir=/home/jornal01/TelaSocial-Mediator start mediator.js app ./scripts/salas.json
