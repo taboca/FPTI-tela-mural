@@ -5,7 +5,7 @@
  "about":"start",
  "function":"saveRSS",
  "expiretimer":10000, 
- "data":{"value":"http://feeds.feedburner.com/clickgeral?format=xml","about":"noticias"}, "to":"next"
+ "data":{"value":"http://g1.globo.com/dynamo/pr/rss2.xml","about":"noticias"}, "to":"next"
 }, 
 {
  "about":"next",
