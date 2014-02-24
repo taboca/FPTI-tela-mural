@@ -1,36 +1,31 @@
     body { 
- 	font-weight:bold;	
-	padding:10px;
-	padding-top:0;
+	 	font-weight:bold;	
+		padding:10px;
+		padding-top:0;
     } 
 
-/*
-	background:url(../vendor/shadow.png) 50% 0 no-repeat; 
-*/
     div.itemshadow { 
-	background-size: 530px 50px; 
-	margin-top:1.0em;
-	width:100%;
+		background-size: 530px 50px; 
+		margin-top:1.0em;
+		width:100%;
     } 
     div.item { 
-	margin-top:.5em;
-	color:black;
-	margin-left:.8em;
+		margin-top:.5em;
+		color:white;
+		margin-left:.8em;
     } 
     div h3 { 
-	font-size:160%;
-	font-weight:bold;
-	margin:0;
-                font-family:Sanchez;
-
-        color:black;
-	margin-top:0em;
-	margin-bottom:.3em;
+		font-size:160%;
+		font-weight:bold;
+		margin:0;
+	    color:white;
+		margin-top:0em;
+		margin-bottom:.3em;
     } 
     div.desc { 
-	font-size:16pt ! important;
-	margin-bottom:5px;
- 	font-weight:normal ! important;
-	color:black ! important;
+		font-size:16pt ! important;
+		margin-bottom:5px;
+	 	font-weight:normal ! important;
+		color:white ! important;
     } 
 
