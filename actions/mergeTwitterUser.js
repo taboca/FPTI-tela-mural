@@ -15,8 +15,7 @@ function initApp(name, appPath) {
 
 var T = new Twit(config.twit);
 
-//var stream = T.stream('statuses/filter', { track: name })
-var stream = T.stream('user', { with:'user'} )
+var stream = T.stream('statuses/filter', { track: 'pti_brasil' })
 
 var list = new Array() 
 
@@ -25,7 +24,7 @@ var ll = 12;
 var bufferRepeat = new Array();
 
 stream.on('error', function (info) { 
-  //console.log('Error:' + info);
+  console.log('111111111' + info);
 });
 
 stream.on('disconnect', function (info) { 
@@ -35,7 +34,6 @@ stream.on('disconnect', function (info) {
 });
 
 stream.on('tweet', function (tweet) {
-
 
   var strOut = "";
   
@@ -59,8 +57,8 @@ stream.on('tweet', function (tweet) {
 
   var userUniqueArray=new Array();
   for(var i=0;i<list.length;i++) {
-    //  dump(a[i].created_at+ ' - ' + a[i].text);/a
-    userUniqueArray['-'+list[i].user.screen_name]=list[i];
+      //  dump(a[i].created_at+ ' - ' + a[i].text);/a
+          userUniqueArray['-'+list[i].user.screen_name]=list[i];
   } 
 
   var list2 = new Array();
@@ -68,19 +66,23 @@ stream.on('tweet', function (tweet) {
   for(var k in userUniqueArray) {
          user = userUniqueArray[k];
          if(user.user.screen_name == 'pti_brasil') {
-             console.log('!!! found user pti_brasil');
+             console.log('!!! found user');
              list2.push(user);
          }
   }
   var buffJSON = list2; 
 
   strOut= JSON.stringify(buffJSON);
+  //strOut = list.length;
   var filePath = pathFS.join( appPath, 'channel', name+'.txt');
+       // fs.writeFile(filePath, strOut, 'binary', function(err){
   fs.writeFile( filePath, strOut, 'utf8', function(err){
      if (err) { 
          out.senderr({'result':'error', 'payload': err});
          throw err; 
      }   
+     //out.send({'result':'ok'});
+//     clearTimeout(timer);
   });
 
 });

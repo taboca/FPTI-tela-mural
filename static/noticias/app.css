@@ -30,7 +30,7 @@
     div.desc { 
 		font-size:15pt ! important;
 		margin-bottom:5px;
-		color:white ! important;
+		color:#000 ! important;
 		overflow:hidden;
 		text-overflow:ellipsis; 
 		height:80px;
